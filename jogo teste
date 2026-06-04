@@ -1,0 +1,26 @@
+import pyttsx3
+
+voz = pyttsx3.init()
+
+def falar(texto):
+    print(texto)
+    voz.say(texto)
+    voz.runAndWait()
+
+falar("Você está com a bola nos últimos segundos da partida!")
+
+print("\n1 - Arremessar")
+print("2 - Passar a bola")
+
+escolha = input("O que você faz? ")
+
+if escolha == "1":
+    falar("Você arremessa de três pontos!")
+    falar("A bola viaja pelo ar...")
+    falar("Cesta! Seu time vence o jogo!")
+elif escolha == "2":
+    falar("Você passa para seu companheiro.")
+    falar("Ele recebe a bola e faz a bandeja.")
+    falar("Dois pontos para o time!")
+else:
+    falar("Você ficou indeciso e perdeu a posse da bola.")
